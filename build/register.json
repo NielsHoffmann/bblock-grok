@@ -1,8 +1,8 @@
 {
-  "name": "My OGC Building Blocks repository",
-  "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
-  "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2025-03-19T13:45:43.631824",
+  "name": "Grokking OGC Building Blocks",
+  "abstract": "This is a repository to play with building blocks and get to grips with the inner workings and functionality.\n",
+  "description": "More information on OGC Building Blocks can be found on the [site](https://ogcincubator.github.io/bblocks-docs/).\n\nThe instructions for the setup are to be found [here](https://ogcincubator.github.io/bblocks-docs/create).\n",
+  "modified": "2025-03-19T15:28:51.604494",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"e8df6b22cb38da4f600f3a0292c58fdef7734f97",
@@ -16,11 +16,60 @@
   "viewerURL": "https://nielshoffmann.github.io/bblock-grok/",
   "validationReport": "https://nielshoffmann.github.io/bblock-grok/build/tests/report.html",
   "imports": [
-    "https://opengeospatial.github.io/bblocks/register.json"
+    "https://opengeospatial.github.io/bblocks/register.json",
+    "https://ogcincubator.github.io/bblock-prov-schema/build/register.json",
+    "https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json"
   ],
   "bblocks": [
     {
-      "itemIdentifier": "ogc.bbr.template.mySchema",
+      "itemIdentifier": "tikouka.grok.ldvProv",
+      "name": "ldv Prov object",
+      "abstract": "This examples shows a provenance object for the LDV standard",
+      "status": "under-development",
+      "dateTimeAddition": "2025-03-19T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-examples",
+      "version": "1.0",
+      "dateOfLastChange": "2025-03-19",
+      "sources": [],
+      "maturity": "development",
+      "scope": "unstable",
+      "dependsOn": [],
+      "tags": [
+        "prov",
+        "examples"
+      ],
+      "group": "Examples",
+      "highlighted": true,
+      "shaclRules": {},
+      "ldContext": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/context.jsonld",
+      "schema": {
+        "application/yaml": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/schema.json"
+      },
+      "sourceSchema": "https://nielshoffmann.github.io/bblock-grok/_sources/ldvProv/schema.yaml",
+      "sourceLdContext": "https://nielshoffmann.github.io/bblock-grok/_sources/ldvProv/context.jsonld",
+      "sourceFiles": "https://nielshoffmann.github.io/bblock-grok/_sources/ldvProv/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/NielsHoffmann/bblock-grok/blob/master/build/tests/grok/ldvProv/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/grok/ldvProv/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/grok/ldvProv/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://nielshoffmann.github.io/bblock-grok/bblock/tikouka.grok.ldvProv"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "tikouka.grok.mySchema",
       "$schema": "metaschema.yaml",
       "name": "My Schema",
       "abstract": "An example schema defining the set of properties of any type of object.",
@@ -43,38 +92,38 @@
         "templates"
       ],
       "shaclRules": {
-        "ogc.bbr.template.mySchema": [
+        "tikouka.grok.mySchema": [
           "https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/rules.shacl"
         ]
       },
-      "ldContext": "https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/mySchema/context.jsonld",
+      "ldContext": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/context.jsonld",
       "schema": {
-        "application/yaml": "https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/mySchema/schema.yaml",
-        "application/json": "https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/mySchema/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/schema.json"
       },
       "sourceSchema": "https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/schema.yaml",
       "sourceLdContext": "https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/context.jsonld",
       "sourceFiles": "https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/",
       "rdfData": [],
       "validationPassed": true,
-      "testOutputs": "https://github.com/NielsHoffmann/bblock-grok/blob/master/build/tests/bbr/template/mySchema/",
+      "testOutputs": "https://github.com/NielsHoffmann/bblock-grok/blob/master/build/tests/grok/mySchema/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/bbr/template/mySchema/index.md"
+          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/grok/mySchema/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/bbr/template/mySchema/index.json"
+          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/grok/mySchema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://nielshoffmann.github.io/bblock-grok/bblock/ogc.bbr.template.mySchema"
+          "url": "https://nielshoffmann.github.io/bblock-grok/bblock/tikouka.grok.mySchema"
         }
       }
     },
     {
-      "itemIdentifier": "ogc.bbr.template.myFeature",
+      "itemIdentifier": "tikouka.grok.myFeature",
       "name": "Custom Feature",
       "abstract": "This examples shows a simple customisation for OGC API Feature schemas",
       "status": "under-development",
@@ -93,41 +142,41 @@
       "scope": "unstable",
       "dependsOn": [
         "ogc.geo.features.feature",
-        "ogc.bbr.template.mySchema"
+        "tikouka.grok.mySchema"
       ],
       "tags": [
         "feature",
         "examples"
       ],
       "group": "Examples",
-      "highlighted": true,
+      "highlighted": false,
       "shaclRules": {
-        "ogc.bbr.template.mySchema": [
+        "tikouka.grok.mySchema": [
           "https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/rules.shacl"
         ]
       },
       "schema": {
-        "application/yaml": "https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/myFeature/schema.yaml",
-        "application/json": "https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/myFeature/schema.json"
+        "application/yaml": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/myFeature/schema.yaml",
+        "application/json": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/myFeature/schema.json"
       },
       "sourceSchema": "https://nielshoffmann.github.io/bblock-grok/_sources/myFeature/schema.yaml",
-      "ldContext": "https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/myFeature/context.jsonld",
+      "ldContext": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/myFeature/context.jsonld",
       "sourceFiles": "https://nielshoffmann.github.io/bblock-grok/_sources/myFeature/",
       "rdfData": [],
       "validationPassed": true,
-      "testOutputs": "https://github.com/NielsHoffmann/bblock-grok/blob/master/build/tests/bbr/template/myFeature/",
+      "testOutputs": "https://github.com/NielsHoffmann/bblock-grok/blob/master/build/tests/grok/myFeature/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/bbr/template/myFeature/index.md"
+          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/grok/myFeature/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/bbr/template/myFeature/index.json"
+          "url": "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/grok/myFeature/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://nielshoffmann.github.io/bblock-grok/bblock/ogc.bbr.template.myFeature"
+          "url": "https://nielshoffmann.github.io/bblock-grok/bblock/tikouka.grok.myFeature"
         }
       }
     }

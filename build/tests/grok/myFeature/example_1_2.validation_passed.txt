@@ -1,0 +1,10 @@
+Validation report for tikouka.grok.myFeature - Custom Feature
+Generated 2025-03-19T15:28:53.484292+00:00
+=== Files ===
+Using example_1_2.yaml from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

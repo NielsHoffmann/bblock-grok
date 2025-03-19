@@ -1,0 +1,11 @@
+{
+  "@context": "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/context.jsonld",
+  "id": "logregel_X",
+  "name": "ActivityExample",
+  "featureType": "Activity",
+  "qualifiedUsage": {
+    "featureType": "Usage",
+    "entity": "data_subject_Y",
+    "generatedAtTime": "2025-03-19T00:00:19+02:00"
+  }
+}

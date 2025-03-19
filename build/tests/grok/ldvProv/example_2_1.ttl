@@ -1,0 +1,10 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///github/workspace/logregel_X> a prov:Activity ;
+    rdfs:label "ActivityExample" ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:entity <file:///github/workspace/data_subject_Y> ;
+            prov:generatedAtTime "2025-03-19T00:00:19+02:00"^^xsd:dateTime ] .
+

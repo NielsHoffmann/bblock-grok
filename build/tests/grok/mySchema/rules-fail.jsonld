@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/context.jsonld",
+    {
+      "mynamespace": "http://example.org/ns1/"
+    }
+  ],
+  "a": "mynamespace:aThing",
+  "b": 23,
+  "c": 25.5
+}

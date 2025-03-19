@@ -7,29 +7,53 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://nielshoffmann.github.io/ogc.bbr.template.myFeature> a skos:Concept,
+<https://nielshoffmann.github.io/tikouka.grok.ldvProv> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "ldv Prov object" ;
+    dct:abstract "This examples shows a provenance object for the LDV standard" ;
+    dct:created "2025-03-19T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/grok/ldvProv/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/bblock/tikouka.grok.ldvProv" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/grok/ldvProv/index.md" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-03-19"^^xsd:date ;
+    skos:inScheme <https://nielshoffmann.github.io/bblock-grok/> ;
+    dcat:keyword "examples",
+        "prov" ;
+    bblocks:hasJsonLdContext <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/context.jsonld> ;
+    bblocks:hasSchema <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/schema.json>,
+        <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/ldvProv/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://nielshoffmann.github.io/bblock-grok/_sources/ldvProv/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://nielshoffmann.github.io/tikouka.grok.myFeature> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Custom Feature" ;
     dct:abstract "This examples shows a simple customisation for OGC API Feature schemas" ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/bbr/template/myFeature/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/bblock/tikouka.grok.myFeature" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/bbr/template/myFeature/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/bblock/ogc.bbr.template.myFeature" ] ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/grok/myFeature/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/grok/myFeature/index.md" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2025-03-19"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
     skos:inScheme <https://nielshoffmann.github.io/bblock-grok/> ;
     dcat:keyword "examples",
         "feature" ;
-    bblocks:dependsOn <https://nielshoffmann.github.io/ogc.bbr.template.mySchema>,
-        <https://nielshoffmann.github.io/ogc.geo.features.feature> ;
-    bblocks:hasJsonLdContext <https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/myFeature/context.jsonld> ;
-    bblocks:hasSchema <https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/myFeature/schema.json>,
-        <https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/myFeature/schema.yaml> ;
+    bblocks:dependsOn <https://nielshoffmann.github.io/ogc.geo.features.feature>,
+        <https://nielshoffmann.github.io/tikouka.grok.mySchema> ;
+    bblocks:hasJsonLdContext <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/myFeature/context.jsonld> ;
+    bblocks:hasSchema <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/myFeature/schema.json>,
+        <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/myFeature/schema.yaml> ;
     bblocks:hasShaclRule <https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
@@ -38,26 +62,26 @@
 
 <https://example.com/sources/1> rdfs:label "Sample source document" .
 
-<https://nielshoffmann.github.io/ogc.bbr.template.mySchema> a skos:Concept,
+<https://nielshoffmann.github.io/tikouka.grok.mySchema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "My Schema" ;
     dct:abstract "An example schema defining the set of properties of any type of object." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/bbr/template/mySchema/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/bblock/ogc.bbr.template.mySchema" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/bblock/tikouka.grok.mySchema" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/json-full/grok/mySchema/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/bbr/template/mySchema/index.md" ] ;
+            rdfs:isDefinedBy "https://nielshoffmann.github.io/bblock-grok/build/generateddocs/markdown/grok/mySchema/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-03-19"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
     skos:inScheme <https://nielshoffmann.github.io/bblock-grok/> ;
     dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/mySchema/context.jsonld> ;
-    bblocks:hasSchema <https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/mySchema/schema.json>,
-        <https://nielshoffmann.github.io/bblock-grok/build/annotated/bbr/template/mySchema/schema.yaml> ;
+    bblocks:hasJsonLdContext <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/context.jsonld> ;
+    bblocks:hasSchema <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/schema.json>,
+        <https://nielshoffmann.github.io/bblock-grok/build/annotated/grok/mySchema/schema.yaml> ;
     bblocks:hasShaclRule <https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/rules.shacl> ;
     bblocks:hasSourceJsonLdContext <https://nielshoffmann.github.io/bblock-grok/_sources/mySchema/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
@@ -65,27 +89,29 @@
 
 <https://nielshoffmann.github.io/bblock-grok/> a skos:ConceptScheme,
         dcat:Catalog ;
-    rdfs:label "Building Blocks - My OGC Building Blocks repository" ;
-    dct:abstract """This is an example text for the abstract. It should be short and to the point.
-A "Tell me more" link will appear if there is an additional description with a longer explanation.
+    rdfs:label "Building Blocks - Grokking OGC Building Blocks" ;
+    dct:abstract """This is a repository to play with building blocks and get to grips with the inner workings and functionality.
 """ ;
-    dct:description """The description can be longer. Both **the abstract** *and the description* support Markdown,
-including [links](https://google.es).
+    dct:description """More information on OGC Building Blocks can be found on the [site](https://ogcincubator.github.io/bblocks-docs/).
+
+The instructions for the setup are to be found [here](https://ogcincubator.github.io/bblocks-docs/create).
 """ ;
-    skos:prefLabel "Building Blocks - My OGC Building Blocks repository" ;
+    skos:prefLabel "Building Blocks - Grokking OGC Building Blocks" ;
     bblocks:hasValidationReport <https://nielshoffmann.github.io/bblock-grok/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    bblocks:imports <https://ogcincubator.github.io/bblock-prov-schema/build/register.json>,
+        <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-03-19T13:45:44.657360"^^xsd:dateTime ;
-    prov:startedAtTime "2025-03-19T13:45:44.591028"^^xsd:dateTime ;
+    prov:endedAtTime "2025-03-19T15:28:53.564840"^^xsd:dateTime ;
+    prov:startedAtTime "2025-03-19T15:28:53.498501"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:a8348a61cb03f6fa7ddb83e413c9e3e12f31017d" ;
-            rdfs:seeAlso <https://nielshoffmann.github.io/bblock-grok/build/register.json> ] ;
+            dct:hasVersion "git:c0bfb2e380bb5cb935e46216abe264104bce10e6" ;
+            rdfs:seeAlso <https://nielshoffmann.github.io/bblock-grok/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
