@@ -1,0 +1,24 @@
+{
+    "name": "ldv Prov object",
+    "abstract": "This examples shows a provenance object for the LDV standard",
+    "status": "under-development",
+    "dateTimeAddition": "2025-03-19T00:00:00Z",
+    "itemClass": "schema",
+    "register": "ogc-building-block-examples",
+    "version": "1.0",
+    "dateOfLastChange": "2025-03-19",
+    "sources": [
+     
+    ],
+    "maturity": "development",
+    "scope": "unstable",
+    "dependsOn": [
+    ],
+    "tags": [
+      "prov",
+      "examples"
+    ],
+    "group": "Examples",
+    "highlighted": true
+  }
+  

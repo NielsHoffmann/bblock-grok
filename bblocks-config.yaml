@@ -1,22 +1,24 @@
 # A short, descriptive name of this building block collection
-name: My OGC Building Blocks repository
+name: Grokking OGC Building Blocks
 
 # Short abstract for this collection (optional)
 abstract: |
-  This is an example text for the abstract. It should be short and to the point.
-  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+  This is a repository to play with building blocks and get to grips with the inner workings and functionality.
 
 # Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  More information on OGC Building Blocks can be found on the [site](https://ogcincubator.github.io/bblocks-docs/).
+
+  The instructions for the setup are to be found [here](https://ogcincubator.github.io/bblocks-docs/create).
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.bbr.template.
+identifier-prefix: tikouka.grok.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
+  - https://ogcincubator.github.io/bblock-prov-schema/build/register.json
+  - https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json
 
 # Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
 # version

@@ -1,0 +1,16 @@
+- title: Basic example
+  content: |-
+    JSON
+
+  snippets:
+    - language: json
+      ref: examples/basic.json
+    
+
+- title: Qualified Usage example
+  content: |-
+    Qualified Usage: een data_subject is gebruikt in een activiteit op moment X
+
+  snippets:
+    - language: json
+      ref: examples/q_use.json
